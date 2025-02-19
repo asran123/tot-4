@@ -1,0 +1,50 @@
+:root{
+    --main-color:rgb(255 255 255 / 80%);
+
+}
+
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #777;
+}
+p{
+    width: 400px;
+    margin: 30px auto;
+    font-size: 20px;
+    color:var(--main-color);
+    border-right: 2px solid var(--main-color);
+    overflow: hidden;
+    white-space: nowrap;
+    animation: control-width 3s 2s steps(41) both, blink 0.5s infinite ;
+}
+@keyframes control-width{
+    from{
+        width: 0;
+
+    }
+    to{
+        width: 400px;
+
+    }
+} 
+@keyframes blink{
+    from{
+        border-color: var(--main-color);
+    }
+    to{
+        border-color: transparent;
+    }
+}
+
+h1{
+    width: 360px;
+    margin: 30px auto;
+    color:var(--main-color);
+    border-left: 2px solid var(--main-color);
+    overflow: hidden;
+    white-space: nowrap;
+    animation: control-width 3s 2s steps(30) both ,blink 0.5s infinite;
+}
